@@ -1,0 +1,273 @@
+<ion-header class="home">
+  <ion-navbar class="pages-header">
+    <ion-grid>
+      <ion-row>
+        <ion-col width-20>
+          <img src="build/images/advance-health-logo-image.png"/>
+        </ion-col>
+        <ion-col width-60>
+          <h1 class="header">Nurse Practitioner Portal</h1>
+        </ion-col>
+        <ion-col width-20>
+          <img class="profile-image" src="build/images/ah-test-profile-image.png"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-grid>
+
+    <ion-row class="row-welcome-message">
+      <ion-col>
+        <ion-card class="welcome-card">
+          <ion-card-header class="no-bottom-pad">
+            <ion-row>
+              <ion-col>
+                <h1 item-left class="welcome-message-text">Welcome to NP Portal, Jay!</h1>
+              </ion-col>
+              <ion-col class="pull-right">
+                <ion-badge class="badge-online">Online</ion-badge>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content class="show-hide-notifications">
+            <label class="collapse" for="_1">{{collapseLabel}}</label>
+            <input id="_1" type="checkbox" (click)="updateCollapseLabel()">
+            <div class="notification-text">
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum eget lectus vel ultrices. Nam blandit dui vitae tellus laoreet, at aliquet sapien volutpat. Praesent pretium </li>
+                <li>fermentum lectus sit amet maximus. Mauris convallis sem quis metus luctus semper. Donec ut semper sapien, vel iaculis</li> 
+                <li>mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elit tortor, condimentum quis lacus sed, tincidunt congue tellus. Maecenas imperdiet nisi felis,</li>
+                <li>ut eleifend magna dictum quis. Aliquam malesuada lorem ac quam eleifend</li>
+              </ul>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-today-metrics">
+      <ion-col width-33 class="no-top-pad">
+        <ion-row>
+          <ion-col class="no-right-pad">
+            <ion-card class="today-card">
+              <ion-card-header>
+                <ion-row>
+                  <ion-col>
+                    <h1 class="home-section-header" item-left>Today</h1>
+                  </ion-col>
+                  <ion-col class="pull-right">
+                    <ion-label class="home-section-header-2">October 3, 2016</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-card-header>
+              <!--<hr>-->
+              <ion-card-content class="today-content">
+                <ion-list [virtualScroll]="todayVisits">
+                  <button ion-item *virtualItem="let visit" (click)="linkToSchedule(visit)">
+                    <ion-row>
+                      <ion-col class="today-table-row-name" width-25>{{visit.memberLastName}},<br>{{visit.memberFirstName}}</ion-col>
+                      <ion-col class="today-table-row-phone" width-25>{{visit.memberPhone}}</ion-col>
+                      <ion-col class="today-table-row-distance-time" width-50>{{visit.distance}} / {{visit.estimatedTime}}</ion-col>
+                    </ion-row>
+                  </button>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col width-67 class="no-top-pad">
+        <ion-row>
+        <!--assessments completed / Assessment Duration-->
+          <ion-col class="no-left-pad">
+            <ion-row>
+              <ion-col class="no-top-pad no-side-pad">
+                <ion-card class="metric-card">
+                  <ion-card-header>
+                    <ion-row>
+                      <ion-col>
+                        <h1 class="home-section-header" item-left>Assessments Completed</h1>
+                      </ion-col>
+                      <ion-col class="pull-right">
+                        <ion-label class="home-section-header-2"> </ion-label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <ion-card-content class="metric-card-content">
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col class="assessment-completed no-side-pad">
+                          <ion-row><ion-label class="assessment-completed-you-number circle">13</ion-label></ion-row>
+                          <hr>
+                          <ion-row class="subtitle-assessment-completed-you">You</ion-row>
+                        </ion-col>
+                        <ion-col class="assessment-completed no-side-pad">
+                          <ion-row><ion-label class="assessment-completed-np-average-number circle">17</ion-label>
+                          </ion-row>
+                          <hr>
+                          <ion-row class="subtitle-assessment-completed-np">NP Average
+                          </ion-row>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                  </ion-card-content>
+                  <!--<ion-card-content class="metric-card-content">
+                    <ion-list no-lines>
+                      <ion-list-header class="util-date-header">9/26 - 9/30</ion-list-header>
+                      <ion-item>
+                        You: 15
+                        <ion-icon class="np-assessments-cmpl-icon" name="close" item-right></ion-icon>
+                      </ion-item>
+                      <ion-item>
+                        Average: 19
+                        <ion-icon class="avg-assessments-cmpl-icon" name="checkmark" item-right></ion-icon>
+                      </ion-item>
+                    </ion-list>
+                  </ion-card-content>-->
+                </ion-card>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="no-side-pad">
+                <ion-card class="metric-card">
+                  <ion-card-header>
+                    <ion-row>
+                      <ion-col>
+                        <h1 class="home-section-header" item-left>Assessment Duration</h1>
+                      </ion-col>
+                      <ion-col class="pull-right">
+                        <ion-label class="home-section-header-2">(min)</ion-label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <!--<hr>-->
+                  <ion-card-content class="metric-card-content">
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col class="assessment-duration no-side-pad">
+                          <ion-row><ion-label class="assessment-duration-you-number circle">26</ion-label></ion-row>
+                          <hr>
+                          <ion-row class="subtitle-assessment-duration-you">You</ion-row>
+                        </ion-col>
+                        <ion-col class="assessment-duration no-side-pad">
+                          <ion-row><ion-label class="assessment-duration-np-average-number circle">35</ion-label></ion-row>
+                          <hr>
+                          <ion-row class="subtitle-assessment-duration-np">NP Average</ion-row>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                    <!--<ion-list no-lines>
+                      <ion-list-header class="util-date-header">9/26 - 9/30</ion-list-header>
+                      <ion-item>
+                        You: 29 minutes
+                        <ion-icon class="avg-assessments-cmpl-icon" name="checkmark" item-right></ion-icon>
+                      </ion-item>
+                      <ion-item>
+                        All NPs: 35 minutes
+                        <ion-icon class="avg-assessments-cmpl-icon" name="checkmark" item-right></ion-icon>
+                      </ion-item>
+                    </ion-list>-->
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+          <!--Utilization / Cancellations-->
+          <ion-col>
+            <ion-row>
+              <ion-col class="no-top-pad no-side-pad">
+                  <ion-card class="metric-card">
+                    <ion-card-header>
+                    <ion-row>
+                      <ion-col>
+                        <h1 class="home-section-header" item-left>Utilization</h1>
+                      </ion-col>
+                      <ion-col class="pull-right">
+                        <ion-label class="home-section-header-2"> </ion-label>
+                      </ion-col>
+                    </ion-row>
+                    </ion-card-header>
+                    <ion-card-content class="metric-card-content">
+                      <!--<ion-list no-lines>
+                        <ion-list-header>
+                          <ion-row>
+                            <ion-col width-50 class="util-date-header">September 2016</ion-col>
+                            <ion-col width-50 class="util-percent-header pull-right">
+                            </ion-col>
+                          </ion-row>
+                        </ion-list-header>
+                        <ion-item>
+                          In Assessments: 131 hours
+                        </ion-item>
+                        <ion-item>
+                          Drive Time: 19.5 hours
+                        </ion-item>
+                        <ion-item>
+                          Available: 9.5 hours
+                        </ion-item>
+                      </ion-list>-->
+                      <!--<div class="col-md-6">
+                        <base-chart class="chart"
+                                    [data]="lineChartData"
+                                    [labels]="lineChartLabels"
+                                    [options]="lineChartOptions"
+                                    [chartType]="lineChartType"
+                                    (chartHover)="chartHovered($event)"
+                                    (chartClick)="chartClicked($event)"></base-chart>
+                      </div>-->
+                      <base-chart class="chart"
+                        [data]="doughnutChartData"
+                        [labels]="doughnutChartLabels"
+                        [chartType]="doughnutChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></base-chart>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="no-side-pad">
+                <ion-card class="metric-card">
+                  <ion-card-header>
+                    <ion-row>
+                      <ion-col>
+                        <h1 class="home-section-header" item-left>Cancellations</h1>
+                      </ion-col>
+                      <ion-col class="pull-right">
+                        <ion-label class="home-section-header-2"> </ion-label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card-header>
+                  <!--<hr>-->
+                  <ion-card-content class="metric-card-content">
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col class="cancel-number no-side-pad">
+                          <ion-row><ion-label class="header-number circle">3</ion-label></ion-row>
+                          <hr>
+                          <ion-row class="subtitle-cancel">Member</ion-row>
+                        </ion-col>
+                        <ion-col class="cancel-number no-side-pad">
+                          <ion-row><ion-label class="header-number circle">0</ion-label></ion-row>
+                          <hr>
+                          <ion-row class="subtitle-cancel">Provider</ion-row>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,99 @@
+<ion-header class="home">
+  <ion-navbar class="pages-header">
+    <ion-grid>
+      <ion-row>
+        <ion-col width-20>
+          <img src="build/images/advance-health-logo-image.png"/>
+        </ion-col>
+        <ion-col width-60>
+          <h1 class="header">Tasks</h1>
+        </ion-col>
+        <ion-col width-20>
+          <img class="profile-image" src="build/images/ah-test-profile-image.png"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="tasks">
+  <ion-grid>
+    <ion-row>
+      <!--<ion-col class="home-tile">
+        <ion-row class="home-tile-grid">-->
+<!--Members-->
+          <ion-col class="groove-border">
+            <div class="item item-avatar"><h1>Members</h1></div>
+            <hr>
+            <ion-list class="member-table-header-list">
+              <!--Member Table header-->
+              <ion-list-header>
+                <ion-row>
+                  <ion-col class="member-table-header" width-15>Name</ion-col>
+                  <ion-col class="member-table-header" width-24>Facility</ion-col>
+                  <ion-col class="member-table-header" width-18>Member Status</ion-col>
+                  <ion-col class="member-table-header" width-13>Health Status</ion-col>
+                  <ion-col class="member-table-header" width-15>Next In-Person</ion-col>
+                  <ion-col class="member-table-header" width-15>Next Phone</ion-col>
+                </ion-row>
+              </ion-list-header>
+            </ion-list>
+              <!--Member table body-->
+            <ion-list [virtualScroll]="members">
+              <button ion-item *virtualItem="let member" (click)="linkToCompass(member)">
+                <ion-row>
+                  <ion-col class="member-table-body" width-15>{{member.lastName}},<br>{{member.firstName}}</ion-col>
+                  <ion-col class="member-table-body" width-24>{{member.facility}}</ion-col>
+                  <ion-col class="member-table-body" width-18>{{member.memberStatus}}</ion-col>
+                  <ion-col class="member-table-body" width-13>{{member.healthStatus}}</ion-col>
+                  <ion-col class="member-table-body" width-15>
+                    {{member.nextInPerson}}
+                  </ion-col>
+                  <ion-col class="member-table-body" width-15>{{member.nextPhone}}</ion-col>
+                </ion-row>
+              </button>
+            </ion-list>
+          </ion-col>
+
+<!--Tasks-->
+          <ion-col class="groove-border">
+            <div class="item item-avatar"><h1>Task Summary</h1></div>
+            <hr>
+            <ion-toolbar>
+              <ion-segment>
+                <ion-segment-button value="incomplete" aria-pressed="true" class="segment-activated" (click)="setDisplayTasks('incomplete')">
+                  Incomplete
+                </ion-segment-button>
+                <ion-segment-button value="complete" (click)="setDisplayTasks('complete')">
+                  Complete
+                </ion-segment-button>
+              </ion-segment>
+            </ion-toolbar>
+            <ion-list [virtualScroll]="displayTasks">
+              <div ion-item *virtualItem="let task">
+                <ion-row>  
+                  <ion-col>
+                    <h1>{{task.memberName}}</h1>
+                    <h2>{{task.npName}}</h2>
+                    <h3>{{task.scheduleDate}}</h3>
+                    <h3>{{task.description}}</h3>
+                    <button *ngIf="task.status == 'incomplete'">Complete</button>
+                  </ion-col>             
+                  <!--<ion-avatar>
+                    <h2>{{task.memberName}}</h2>
+                    <h3>{{task.npName}}</h3>
+                  </ion-avatar>
+                  <p>
+                    <ion-label>{{task.scheduleDate}}</ion-label>
+                    <ion-label>{{task.description}}</ion-label>
+                    <button>Complete</button>
+                  </p>-->
+                </ion-row>
+              </div>
+            </ion-list>
+          </ion-col>
+        <!--</ion-row>-->
+      <!--</ion-col>-->
+    </ion-row>
+  </ion-grid>
+</ion-content>

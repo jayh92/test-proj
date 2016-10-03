@@ -1,0 +1,60 @@
+.tabs-vertical .tab-nav.tabs{
+  position: absolute !important;
+  top: 43px !important;
+  height: 100% !important;
+  width: 60px !important;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+
+  border-left-color: $ah-blue;
+  border-top: none;
+
+  a.tab-item{
+    display:block !important;
+    height: auto !important;
+
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 20px 0;
+  }
+}
+
+.has-tabs{
+  bottom: 0 !important;
+  left:60px !important;
+}
+
+ion-tabbar.show-tabbar {
+    background-color: $ah-black;
+}
+ion-tabbar.a {
+  background-color: $ah-white
+}
+ion-tabbar.a:hover {
+  background-color: $ah-blue;
+  color: $ah-white;
+}
+.tab-button {
+  padding: 8px 0 10px 0;
+}
+.tab-button[aria-selected="true"] {
+  color: $ah-white;
+  background-color: $ah-blue;
+  padding: 8px 0 10px 0;
+}
+.tab-button[aria-selected="false"] {
+  color: $ah-slate;
+  background-color: $ah-black;
+}
+.enable-hover a:hover {
+  opacity: 1;
+  color: $ah-white;
+  background-color: $ah-blue;
+  padding: 8px 0 10px 0;
+}

@@ -1,0 +1,318 @@
+.home {
+    .enable-hover a:hover {
+        background-color: white;
+        color: $ah-blue;
+        padding-bottom: 0px;
+    }
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 0px 0px;
+        background-color: $ah-ash;
+    }
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+    hr {
+        background-color: $ah-green;
+    }
+    ion-row.row-welcome-message {
+        // flex: 1.2;
+        display: table;
+    }
+    .welcome-message-text {
+        font-weight: bolder;
+    }
+    // ion-row.row-today-metrics {
+    //     flex: 2;
+    // }
+    .header {
+        font-weight: bolder;
+    }
+    .home-section-header {
+        font-weight: bolder;
+    }
+    .home-section-header-2 {
+        font-weight: bold;
+        color: $ah-white;
+        margin-top: 0px;
+    }
+    .circle { 
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        background: $ah-blue; 
+        border-radius: 100px;
+        color: $ah-white;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .h2 {
+        text-align: center;
+    }
+    background-color: $ah-white;
+    .welcome-avatar {
+        border-radius: 12px;
+        background-color: $ah-blue;
+        h1 {
+            color: $ah-white;
+        }
+    }
+    .badge-online {
+        color: $ah-white;
+        background-color: $ah-green;
+    }
+    h1.header {
+        color: $ah-white;
+        text-align: center;
+    }
+    .toolbar-background {
+        background-color: $ah-blue
+    }
+    .pages-header {
+        background-color: $ah-blue;
+    }
+    .toolbar-title {
+        color: $ah-white;
+    }
+    .body-grid {
+        height: 90%;
+    }
+    .stats-tile {
+        padding: 0px;
+    }
+    .kpi-tile {
+        padding: 0px;
+    }
+    // ion-col.home-tile {
+        // background-color: $ah-ash;
+        // color: $ah-slate;
+    // }
+    .today-view{
+        width: 100%;
+        height: 300px;
+        min-height: 200px;
+        position: relative;
+    }
+    .today-content {
+        ion-col {
+            color: $ah-blue;
+        }
+        .today-table-row-name {
+            font-weight: bold;
+        }
+        .today-table-row-phone {
+            font-weight: normal;
+        }
+        .today-table-row-distance-time {
+            text-align: center;
+        }    
+    }
+    .home-grid-fill {
+        height: 100%;
+        background-color: $ah-white;
+    }
+    .welcome-card {
+        h1 {
+            color: $ah-green;
+        }
+        // .btn-hide-show {} // needs styles for hiding / showing extra content
+    } 
+    .today-card {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        ion-card-header {
+            padding-right: 0px;
+            padding-bottom: 0px;
+            background-color: $ah-green;
+            h1 {
+                color: $ah-white;
+            }
+        }
+    }
+    .no-top-pad {
+        padding-top: 0px;
+    }
+    .no-bottom-pad {
+        padding-bottom: 0px;
+    }
+    .no-side-pad {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .no-left-pad {
+        padding-left: 0px;
+    }
+    .no-right-pad {
+        padding-right: 0px;
+    }
+    .metric-card {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        ion-card-header {
+            padding-right: 0px;
+            padding-bottom: 0px;
+            background-color: $ah-green;
+            h1 {
+                color: $ah-white;
+            }
+        }
+        .np-assessments-cmpl-icon {
+            color: red;
+        }
+        .avg-assessments-cmpl-icon {
+            color: green;
+        }
+    }
+    .util-date-header {
+        font-weight: bold;
+    }
+    .util-percent-header {
+        color: green;
+        font-weight: bold;
+    }
+    .cancellation-header {
+        font-weight: bold;
+    }
+    .cancellation-body {
+        text-align: center;
+    }
+    .metric-card-content {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        ion-col {
+            padding-top: 0px;
+        }
+    }
+    .assessment-completed {
+        text-align: center;
+        color: $ah-blue;
+        .assessment-completed-you-number, .assessment-completed-np-average-number {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .subtitle-assessment-completed-you, .subtitle-assessment-completed-np {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-weight: bolder;
+            font-size: 24px;
+        }
+        .subtitle-assessment-completed-you {
+            color: lightcoral;
+        }
+    }
+    .assessment-duration {
+        text-align: center;
+        color: $ah-blue;
+        .assessment-duration-you-number, .assessment-duration-np-average-number {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .subtitle-assessment-duration-you, .subtitle-assessment-duration-np {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-weight: bolder;
+            font-size: 24px;
+        }
+        .subtitle-assessment-duration-you {
+            color: $ah-green;
+        }
+    }
+    .cancel-number {
+        // font-size: 50px;
+        // font-weight: bold;
+        text-align: center;
+        color: $ah-blue;
+        .header-number {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .subtitle-cancel {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            font-weight: bolder;
+            font-size: 24px;
+        }
+    }
+    .calendar-text { margin-top: .3em; }
+    .file-text { margin-top: .2em; }
+    .icon-stack {
+        font-size: 60px !important;
+        display:block !important;
+        width: 65px !important;
+        height: 65px !important;
+        text-align:center !important;
+        i{
+            position: absolute !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+    }
+    // Show / Hide top notifications
+    .collapse {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        color: $ah-slate;
+        opacity: 0.5;
+    }
+    .collapse + input{
+        display: none; /* hide the checkboxes */
+    }
+    .collapse + input + div{
+        display:none;
+    }
+    .collapse + input:checked + div{
+        display:block;
+    }
+    .collapse + input:checked ~ label {
+        content: Show Less;
+    }
+    .collapse + input ~ label {
+        content: Show More;
+    }
+    .notification-text {
+        color: $ah-green;
+        font-size: 24px;
+    }
+}
+// Chart css
+.chart-legend, .bar-legend, .line-legend, .pie-legend, .radar-legend, .polararea-legend, .doughnut-legend {
+  list-style-type: none;
+  margin-top: 5px;
+  text-align: center;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  padding-left: 0
+}
+
+.chart-legend li, .bar-legend li, .line-legend li, .pie-legend li, .radar-legend li, .polararea-legend li, .doughnut-legend li {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: smaller;
+  cursor: default
+}
+
+.chart-legend li span, .bar-legend li span, .line-legend li span, .pie-legend li span, .radar-legend li span, .polararea-legend li span, .doughnut-legend li span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px
+}
+.chart {display: block; width: 100%;}

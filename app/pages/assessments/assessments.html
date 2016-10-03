@@ -1,0 +1,74 @@
+<ion-header class="home has-tabs-top">
+  <ion-navbar class="pages-header">
+    <ion-grid>
+      <ion-row>
+        <ion-col width-20>
+          <img src="build/images/advance-health-logo-image.png"/>
+        </ion-col>
+        <ion-col width-60>
+          <h1 class="header">Assessments</h1>
+        </ion-col>
+        <ion-col width-20>
+          <img class="profile-image" src="build/images/ah-test-profile-image.png"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-toolbar class="custom-toolbar-segment">
+      <ion-segment>
+        <ion-segment-button class="assessment-top-segment" value="overdue">
+          Overdue
+        </ion-segment-button>
+        <ion-segment-button class="assessment-top-segment" value="incomplete">
+          Incomplete
+        </ion-segment-button>
+        <ion-segment-button class="assessment-top-segment" value="returned">
+          Returned
+        </ion-segment-button>
+        <ion-segment-button value="all" aria-pressed="true" class="segment-activated">
+          All
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="assessments">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="home-tile">
+        <ion-row class="home-tile-grid">
+          <ion-col>
+            <!--Member Table header-->
+            <ion-list class="assessment-table-header-list outset">
+              <ion-list-header>
+                <ion-row>
+                  <ion-col class="assessment-table-header" width-15>NAME</ion-col>
+                  <ion-col class="assessment-table-header" width-14>DOB</ion-col>
+                  <ion-col class="assessment-table-header" width-14>ADDRESS</ion-col>
+                  <ion-col class="assessment-table-header" width-14>TYPE</ion-col>
+                  <ion-col class="assessment-table-header" width-14>SCHEDULE DATE</ion-col>
+                  <ion-col class="assessment-table-header" width-14>COMPLETED DATE</ion-col>
+                  <ion-col class="assessment-table-header" width-15>STATUS</ion-col>
+                </ion-row>
+              </ion-list-header>
+            </ion-list>
+            <!--Member table body-->
+            <ion-list [virtualScroll]="assessmentsData" class="outset">
+              <button ion-item *virtualItem="let assessment" (click)="goToAssessmentDetail(assessment)">
+                <ion-row>
+                  <ion-col class="assessment-table-body" width-15>{{assessment.name}}</ion-col>
+                  <ion-col class="assessment-table-body" width-14>{{assessment.dob}}</ion-col>
+                  <ion-col class="assessment-table-body" width-14>{{assessment.city}}, {{assessment.state}}<br>{{assessment.zip}}</ion-col>
+                  <ion-col class="assessment-table-body" width-14>{{assessment.type}}</ion-col>
+                  <ion-col class="assessment-table-body" width-14>{{assessment.scheduleDate}}</ion-col>
+                  <ion-col class="assessment-table-body" width-14>{{assessment.completedDate}}</ion-col>
+                  <ion-col class="assessment-table-body" width-15>{{assessment.status}}</ion-col>
+                </ion-row>
+              </button>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

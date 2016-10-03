@@ -1,0 +1,72 @@
+.tasks {
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+    ion-row {
+        flex: 1;
+    }
+    .h2 {
+        text-align: center;
+    }
+    background-color: $ah-white;
+    ion-col.home-tile {
+        background-color: $ah-white;
+    }
+    .toolbar-background {
+        border-radius: 12px;
+        background-color: $ah-green;
+    }
+    hr {
+        background-color: $ah-green;
+    }
+    .pages-header {
+        color: $ah-white;
+        background-color: $ah-blue;
+    }
+}
+.toolbar-title {
+    color: $ah-white;
+}
+.home-tile-grid {
+    height: 100%;
+}
+ion-col.home-tile {
+    background-color: $ah-ash;
+    color: #54585a;
+}
+.home-grid-fill {
+    height: 100%;
+    background-color: $ah-white;
+}
+.member-table-header, .task-table-header {
+    font-weight: bold;
+}
+.member-table-body, .task-table-body {
+    color: #000000;
+}
+.member-table-header-list, .task-table-header-list {
+    margin-bottom: 0px;
+}
+.groove-border {
+    border-style: outset;
+}
+.task-date-label {
+    font-weight: bold;
+}
+.task-member-label {
+    font-weight: bold;
+}
+.task-np-label {
+    opacity: 0.5;
+}
+.badge-overdue {
+    background-color: red;
+}
+ion-list > .item:first-child {
+  transform: translate3d(0px, 1px, 0px) !important;
+}

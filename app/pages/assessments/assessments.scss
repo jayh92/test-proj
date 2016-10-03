@@ -1,0 +1,53 @@
+.assessments {
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+    ion-row {
+        flex: 1;
+    }
+    .h2 {
+        text-align: center;
+    }
+    background-color: $ah-white;
+    ion-item .item .item-radio .item-radio-checked {
+        background-color: $ah-blue;
+    }
+    ion-col.home-tile {
+        background-color: #ffffff;
+    }
+    hr {
+        background-color: $ah-green;   
+    }
+    .outset {
+        border-style: outset;
+    }
+}
+.segment-button {
+    color: $ah-white;
+}
+.segment-button.segment-activated {
+        color: $ah-white;
+        border-color: $ah-white;
+    }
+.assessment-radio-col {
+    padding: 0px 0px 0px 0px;
+}
+.assessment-table-header-list {
+    margin-bottom: 0px;
+    background-color: $ah-green;
+}
+.assessment-table-header {
+    color: $ah-white;
+    font-weight: bold;
+}
+.assessment-top-segment {
+    font-weight: bolder;
+}
+ion-list > .item:first-child {
+  transform: translate3d(0px, 1px, 0px) !important;
+}
